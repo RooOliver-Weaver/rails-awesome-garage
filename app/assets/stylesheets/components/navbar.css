@@ -1,0 +1,43 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  height: 56px;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.7)
+}
+
+.logo {
+  height: 40px;
+  margin-left: 10px;
+}
+
+menu {
+  position: absolute;
+  z-index: 1010;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0 10px;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: aqua;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+  color: magenta;
+}

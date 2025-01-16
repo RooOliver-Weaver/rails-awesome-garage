@@ -1,0 +1,10 @@
+<h1>Cars</h1>
+
+<% @cars.each do |car| %>
+  <%= link_to car_path(car), class: "car-link" do %>
+    <div class="card">
+      <h2><%= car.brand %></h2>
+      <p><%= car.model %> <%= car.year %> </p>
+    </div>
+  <% end %>
+<% end %>

@@ -1,0 +1,13 @@
+<div class="navbar">
+  <div class="navbar-logo">
+    <%= link_to root_path do %>
+      <%= image_tag "garage.png", class: "logo", id: "main-logo" %>
+    <% end %>
+  </div>
+  <div class="menu">
+    <ul class="navbar-links">
+      <li><a href="<%= root_path %>">Home</a></li>
+      <li><a href="<%= favourites_path %>">My Garage</a></li>
+    </ul>
+  </div>
+</div>
