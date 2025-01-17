@@ -1,0 +1,36 @@
+<div class="garage">
+  <div class="show-card">
+    <div class="image-container">
+      <%= image_tag "banner-image.jpg", class: "car-image" %>
+    </div>
+    <div class="card-contents">
+      <div class="car-details">
+        <h2 class="car-brand"><%= @car.brand %></h2>
+        <p class="car-model"><%= @car.model %></p>
+        <p class="car-fuel"><%= @car.fuel %></p>
+        <p class="car-year"><%= @car.year %></p>
+      </div>
+      <div class="review-form">
+        <%= simple_form_for [@car, @car.reviews.new] do |f| %>
+          <div class="star-rating">
+            <% 5.downto(1) do |i| %>
+              <%= f.radio_button :rating, i, id: "star#{i}" %>
+                <label for="star<%= i %>" title="<%= i %> stars">
+                &#9733;
+                </label>
+            <% end %>
+          </div>
+          <%= f.input :content, as: :text, label: false, placeholder: "Your Review", class: "content-input" %>
+          <%= f.button :submit, "Submit", class: "button-submit" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="reviews-container">
+      <% @reviews.each do |review| %>
+        <div class="review-card">
+          <p><%= review.content %> <%= '⭐️' * (review.rating || 0) %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

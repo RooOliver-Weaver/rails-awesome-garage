@@ -1,10 +1,17 @@
-<h1>Cars</h1>
-
-<% @cars.each do |car| %>
-  <%= link_to car_path(car), class: "car-link" do %>
-    <div class="card">
-      <h2><%= car.brand %></h2>
-      <p><%= car.model %> <%= car.year %> </p>
-    </div>
+<div class="home-container">
+  <% @cars.each do |car| %>
+    <%= link_to car_path(car), class: "car-link" do %>
+      <div class="card">
+        <h2><%= car.brand %></h2>
+        <p><%= car.model %> <%= car.year %> </p>
+        <div class="image-container">
+          <%= image_tag "banner-image.jpg", class: "car-image" %>
+          <div class="badge"><%= car.owner.nickname %></div>
+        </div>
+        <div class="card-footer">
+          <p>Comment 💬</p>
+        </div>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>

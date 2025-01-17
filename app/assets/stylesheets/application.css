@@ -9,3 +9,12 @@
  * Consider organizing styles into separate files for maintainability.
  */
 @import 'components/navbar';
+@import 'components/show-card';
+@import 'components/card';
+@import 'components/garage';
+
+body {
+  font-family: 'Roboto Mono';
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
