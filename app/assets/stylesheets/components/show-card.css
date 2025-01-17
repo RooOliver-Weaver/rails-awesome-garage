@@ -116,10 +116,10 @@
 .star-rating input[type="radio"]:checked ~ label,
 .star-rating label:hover,
 .star-rating label:hover ~ label {
-  color: #f5b301;
+  color: #b8f500;
 }
 .fa-star{
-  color: hwb(44 0% 4%)
+  color: #b8f500;
 }
 
 .reviews-container {

@@ -34,3 +34,10 @@
     </div>
   </div>
 </div>
+<% if Favourite.exists?(car_id: @car.id) %>
+  <%= link_to 'Remove from Garage', favourite_path(@car.favourite), method: :delete %>
+<% else %>
+  <%= form_with(model: Favourite.new(car_id: @car.id), url: favourites_path, method: :post) do |f| %>
+    <%= f.submit 'Add to Garage' %>
+  <% end %>
+<% end %>
