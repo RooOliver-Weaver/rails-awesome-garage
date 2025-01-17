@@ -5,7 +5,7 @@
         <h2><%= car.brand %></h2>
         <p><%= car.model %> <%= car.year %> </p>
         <div class="image-container">
-          <%= image_tag "banner-image.jpg", class: "car-image" %>
+          <%= image_tag "#{default_car_image(car.brand)}", class: "car-image" %>
           <div class="badge"><%= car.owner.nickname %></div>
         </div>
         <div class="card-footer">

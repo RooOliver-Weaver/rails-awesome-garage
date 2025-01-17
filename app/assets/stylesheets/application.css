@@ -12,6 +12,7 @@
 @import 'components/show-card';
 @import 'components/card';
 @import 'components/garage';
+@import 'components/home';
 
 body {
   font-family: 'Roboto Mono';

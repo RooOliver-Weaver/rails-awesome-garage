@@ -3,7 +3,7 @@
   <% @favourites.each do |favourite| %>
     <div class="garage-card">
       <div class="garage-image-container">
-        <%= image_tag "banner-image.jpg", class: "garage-car-image" %>
+        <%= image_tag "#{default_car_image(favourite.car.brand)}", class: "car-image" %>
       </div>
         <div class="car-info">
           <h2><%= favourite.car.brand %></h2>

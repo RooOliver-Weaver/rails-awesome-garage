@@ -1,7 +1,11 @@
 <div class="garage">
   <div class="show-card">
     <div class="image-container">
-      <%= image_tag "banner-image.jpg", class: "car-image" %>
+        <%= image_tag "#{default_car_image(@car.brand)}", class: "car-image" %>
+        <%= simple_form_for @favourite do |f| %>
+          <%= f.input :car_id, as: :hidden, input_html: { value: @car.id } %>
+          <%= f.submit "Add to your Garage!", class: "add-button" %>
+        <% end %>
     </div>
     <div class="card-contents">
       <div class="car-details">
@@ -34,10 +38,3 @@
     </div>
   </div>
 </div>
-<% if Favourite.exists?(car_id: @car.id) %>
-  <%= link_to 'Remove from Garage', favourite_path(@car.favourite), method: :delete %>
-<% else %>
-  <%= form_with(model: Favourite.new(car_id: @car.id), url: favourites_path, method: :post) do |f| %>
-    <%= f.submit 'Add to Garage' %>
-  <% end %>
-<% end %>

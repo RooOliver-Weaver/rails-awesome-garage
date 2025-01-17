@@ -10,7 +10,7 @@
   background-color: black;
   height: 56px;
   z-index: 1000;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.7)
+  box-shadow: 0 0 20px rgba(255, 52, 16, 0.7), 0 0 40px rgba(255, 52, 16, 0.7);
 }
 
 .logo {
@@ -33,11 +33,11 @@ menu {
 
 .menu ul li a {
   text-decoration: none;
-  color: aqua;
+  color: rgba(255, 52, 16);
   font-size: 1rem;
   transition: color 0.3s;
 }
 
 .menu ul li a:hover {
-  color: magenta;
+  color: rgb(255, 71, 187);
 }
