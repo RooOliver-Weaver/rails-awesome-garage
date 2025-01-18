@@ -41,10 +41,30 @@
   object-fit: cover;
 }
 
-.add-button {
+.heart-button {
   position: absolute;
   top: 5px;
   right: 5px;
+  background-color: transparent;
+  border-style: none;
+  font-size: 24px;
+  /* color: #ddd; */
+}
+
+.heart-button:hover {
+  color: rgb(255, 80, 80);
+}
+
+.heart-filled {
+  color: red;
+}
+
+.heart-empty {
+  color: #ddd;
+}
+
+.heart-button[disabled] {
+  cursor: not-allowed;
 }
 
 .card-contents {

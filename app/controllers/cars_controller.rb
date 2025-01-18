@@ -8,5 +8,6 @@ class CarsController < ApplicationController
     @reviews = @car.reviews
     @review = Review.new
     @favourite = Favourite.new
+    @is_favourited = Favourite.exists?(car_id: @car.id)
   end
 end
